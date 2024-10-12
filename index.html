@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Lengkap</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link ke file CSS -->
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="calculation">
+        <input type="text" class="display" id="display" oninput="updateResult()" onkeydown="handleKey(event)" autofocus>
+        <div class="result" id="result"></div>
+    </div>
+
+    <!-- Advanced Functions Row -->
+    <div class="button-row">
+      <button class="button" onclick="append('Math.sqrt(')">√</button>
+      <button class="button" onclick="append('π')">π</button>
+      <button class="button" onclick="append('**')">^</button>
+      <button class="button" onclick="append('factorial(')">!</button>
+    </div>
+    <div class="button-row">
+      <button class="button" onclick="setMode('RAD')">RAD</button>
+      <button class="button" onclick="append('Math.sin(')">sin</button>
+      <button class="button" onclick="append('Math.cos(')">cos</button>
+      <button class="button" onclick="append('Math.tan(')">tan</button>
+    </div>
+    <div class="button-row">
+      <button class="button" onclick="toggleInverse()">INV</button>
+      <button class="button" onclick="append(Math.E)">e</button>
+      <button class="button" onclick="append('Math.asin(')">in</button>
+      <button class="button" onclick="append('Math.log(')">log</button>
+    </div>
+    <div class="button-row">
+      <button class="button" onclick="clearDisplay()">AC</button>
+      <button class="button" onclick="toggleParentheses()">()</button>
+      <button class="button" onclick="append('%')">%</button>
+      <button class="button" onclick="append('/')">/</button>
+    </div>
+    <div class="button-row">
+      <button class="button" onclick="append('7')">7</button>
+      <button class="button" onclick="append('8')">8</button>
+      <button class="button" onclick="append('9')">9</button>
+      <button class="button" onclick="append('*')">x</button>
+    </div>
+    <div class="button-row">
+      <button class="button" onclick="append('4')">4</button>
+      <button class="button" onclick="append('5')">5</button>
+      <button class="button" onclick="append('6')">6</button>
+      <button class="button" onclick="append('-')">-</button>
+    </div>
+    <div class="button-row">
+      <button class="button" onclick="append('1')">1</button>
+      <button class="button" onclick="append('2')">2</button>
+      <button class="button" onclick="append('3')">3</button>
+      <button class="button" onclick="append('+')">+</button>
+    </div>
+    <div class="button-row">
+      <button class="button" onclick="append('0')">0</button>
+      <button class="button" onclick="append('.')">.</button>
+      <button class="button" onclick="backspace()">⌫</button>
+      <button class="button" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Link ke file JavaScript -->
+</body>
+</html>
